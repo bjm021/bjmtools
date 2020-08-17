@@ -4,3 +4,18 @@ main: de.bjm.mc.bjmtools.BJMTools
 api-version: "1.16"
 author: Benjamin J. Meyer
 description: A powerful Plugin containing many useful tools
+commands:
+  superenchant:
+    usage: /superehcnaht
+    aliases:
+      - senchant
+    description: Super Enchats the item in your hand
+    permission: bjmtools.superenchant
+permissions:
+  bjmtools.*:
+    description: Gives access to all commands
+    children:
+      bjmtools.superenchant: true
+  bjmtools.superenchant:
+    description: Allows you to super enchant
+    default: op

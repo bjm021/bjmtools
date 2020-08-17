@@ -6,12 +6,9 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import sun.management.Sensor;
 
-import java.awt.*;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.lang.reflect.Parameter;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -44,7 +41,6 @@ public class CommandHandler {
                 if (command.requiresPlayer()) {
                     if (p == null) {
                         sender.sendMessage("[BJMTools] This command can only be executed in-game!!!");
-                        return true;
                     } else {
                         command.getCommandMethod().invoke(this, p, args);
                     }
@@ -56,7 +52,7 @@ public class CommandHandler {
             }
         }
 
-        return false;
+        return true;
     }
 
 
